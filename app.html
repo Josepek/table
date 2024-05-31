@@ -1,0 +1,235 @@
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      table {
+        font-family: "Vazirmatn", sans-serif;
+      }
+      .dataTables_wrapper
+        table.productstable-class
+        > tbody
+        > tr
+        > td:last-child {
+        border-radius: 5px 0 0 5px;
+        padding: 0 0 0 5px;
+      }
+      tbody > tr.child ul.dtr-details {
+        text-align: right;
+        min-width: 160px !important;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: var(--bg);
+        column-gap: 10px;
+        row-gap: 10px;
+        padding: 10px;
+        float: right;
+      }
+      tbody > tr.child ul.dtr-details > li {
+        padding: 5px 10px !important;
+        flex: 0 1 calc(33.33% - 7px);
+        max-width: 33.33%;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 0;
+        display: flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      tbody > tr.child ul.dtr-details > li {
+        border-bottom: 1px solid #efefef;
+        padding: 0.5em 0;
+      }
+      td.child {
+        background: #f5f5f5;
+      }
+      .products table.dataTable > tbody > tr.child span.dtr-title {
+        text-align: right;
+        display: inline-block;
+        color: #616161;
+        font-weight: 400;
+        padding-left: 5px;
+      }
+      tbody > tr.child span.dtr-title {
+        display: inline-block;
+        min-width: 75px;
+        font-weight: 700;
+      }
+      tbody > tr.child ul.dtr-details > li > span.dtr-data {
+        display: inline-block;
+      }
+      tbody > tr.child ul.dtr-details > li:last-child {
+        flex: 100%;
+        max-width: 100%;
+      }
+      .sh-add-cart-datatable {
+        margin: 0;
+        top: 0;
+        font-weight: 400;
+        border-radius: 5px;
+        background-color: #5d8aa8;
+        padding: 10px 5px;
+        text-align: center;
+      }
+      .sh-add-cart-datatable > a {
+        color: #fff;
+        text-decoration: none;
+      }
+      tbody > tr.child ul.dtr-details > li:last-child > .dtr-data {
+        display: flex;
+        direction: rtl;
+        align-items: center;
+      }
+      .products table.dataTable > tbody > tr.child span.dtr-data {
+        text-align: left;
+        flex: 1;
+      }
+      .dataTable .dtr-data > span {
+        margin-left: 5px;
+        display: inline-block;
+        float: right;
+      }
+      .dataTable .dtr-data > span {
+        margin-left: 5px;
+        display: inline-block;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>نام محصول</th>
+              <th>واحد</th>
+              <th>قیمت (تومان)</th>
+              <th>جزئیات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="product-row">
+              <td>ورق شیت استیل 304 ابعاد 1250*2500 ضخامت 0.3 مات 2B</td>
+              <td>کیلوگرم</td>
+              <td>178,500 تومان</td>
+              <td>
+                <button
+                  type="button"
+                  id="btn-info"
+                  class="btn btn-primary"
+                  data-bs-toggle="collapse"
+                  data-bs-target="details1"
+                >
+                  جزئیات
+                </button>
+              </td>
+            </tr>
+            <tr class="child" style="display: none">
+              <td class="child" colspan="6">
+                <ul data-dtr-index="1" class="dtr-details">
+                  <li data-dtr-index="1" data-dt-row="1" data-dt-column="1">
+                    <span class="dtr-title">شناسه محصول</span>
+                    <span class="dtr-data">10325</span>
+                  </li>
+                  <li data-dtr-index="2" data-dt-row="1" data-dt-column="2">
+                    <span class="dtr-title">کیفیت سطح</span>
+                    <span class="dtr-data"
+                      ><span style="direction: rtl">مات 2B</span></span
+                    >
+                  </li>
+                  <li data-dtr-index="3" data-dt-row="1" data-dt-column="3">
+                    <span class="dtr-title">آلیاژ</span>
+                    <span class="dtr-data">استیل 304</span>
+                  </li>
+                  <li data-dtr-index="4" data-dt-row="1" data-dt-column="4">
+                    <span class="dtr-title">اندازه</span>
+                    <span class="dtr-data">ابعاد 1000*2000</span>
+                  </li>
+                  <li data-dtr-index="5" data-dt-row="1" data-dt-column="5">
+                    <span class="dtr-title">ضخامت</span>
+                    <span class="dtr-data">ضخامت 0.3</span>
+                  </li>
+                  <li data-dtr-index="7" data-dt-row="1" data-dt-column="7">
+                    <span class="dtr-title">وزن واحد</span>
+                    <span class="dtr-data">4.76 Kg</span>
+                  </li>
+                  <li data-dtr-index="8" data-dt-row="1" data-dt-column="8">
+                    <span class="dtr-title">کاربرد</span>
+                    <span class="dtr-data">صنعتی</span>
+                  </li>
+                  <li data-dtr-index="9" data-dt-row="1" data-dt-column="9">
+                    <span class="dtr-title">حالت / نوع</span>
+                    <span class="dtr-data">ورق شیت</span>
+                  </li>
+                  <li data-dtr-index="12" data-dt-row="1" data-dt-column="12">
+                    <span class="dtr-title">سفارش دهید</span>
+                    <span class="dtr-data"
+                      ><span>هر واحد ۸۵۰/۰۰۰ تومان</span>
+                      <!-- 
+                      <p
+                        class="product woocommerce add_to_cart_inline sh-add-cart-datatable"
+                      >
+                        <a
+                          href="?add-to-cart=39583"
+                          data-quantity="4.76"
+                          class="button product_type_simple add_to_cart_button ajax_add_to_cart popmake-52550"
+                          data-product_id="39583"
+                          rel="nofollow"
+                          data-product_cat="ورق استیل 304 نگیر"
+                          data-product_sku="10325"
+                          aria-label="ورق شیت استیل 304 ابعاد 1000*2000 ضخامت 0.3 مات 2B"
+                          >خرید</a
+                        >
+                      </p>
+                      -->
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="product-row">
+              <td>ورق شیت استیل 304 ابعاد 1250*2500 ضخامت 0.3 مات 2B</td>
+              <td>کیلوگرم</td>
+              <td>178,500 تومان</td>
+              <td>
+                <button id="btn-info" class="btn btn-primary">جزئیات</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    document.querySelectorAll("#btn-info").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const detailRow =
+          event.target.closest(".product-row").nextElementSibling;
+        console.log(detailRow);
+        detailRow.style.display =
+          detailRow.style.display === "none" ? "" : "none";
+      });
+    });
+  </script>
+</html>
